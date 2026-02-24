@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.google.devtools.ksp)
     alias(libs.plugins.google.dagger.hilt.android)
@@ -5,7 +8,13 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+val baseUrl = Properties().apply { load(FileInputStream("local.properties")) }.getProperty("BASE_URL")
+
 android {
+    buildFeatures {
+        buildConfig = true
+    }
+
     namespace = "com.data"
     compileSdk = 36
 
@@ -14,6 +23,12 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            "\"$baseUrl\""
+        )
     }
 
     buildTypes {

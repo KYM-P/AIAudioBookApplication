@@ -49,6 +49,7 @@ dependencies {
 
     implementation(project(":domain"))
     implementation(project(":data"))
+    implementation(project(":design"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -58,10 +59,6 @@ dependencies {
 
     // compose bom
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.camera.core)
-    implementation(libs.androidx.camera.lifecycle)
-    implementation(libs.androidx.camera.camera2)
-    implementation(libs.androidx.camera.view)
 
     // compose implementation
     listOf(
@@ -70,6 +67,8 @@ dependencies {
         libs.androidx.compose.material3.adaptive,
         libs.androidx.compose.ui,
         libs.androidx.compose.foundation,
+        libs.androidx.navigation.compose,
+        libs.androidx.hilt.navigation.compose,
         libs.androidx.lifecycle.compose
     ).forEach { implementation(it) }
 
@@ -100,4 +99,14 @@ dependencies {
     implementation(libs.squareup.okhttp3)
     implementation(libs.squareup.okhttp3.logging.interceptor)
 
+    // coil
+    implementation(libs.coil.compose)
+
+    // orbit
+    implementation(libs.orbit.core)
+    implementation(libs.orbit.compose)
+    implementation(libs.orbit.viewmodel)
+
+    // immutable
+    implementation(libs.kotlinx.collections.immutable)
 }
