@@ -106,6 +106,18 @@ object TopBarIcon {
             onClick = onClick
         )
     }
+    fun backIcon(
+        modifier: Modifier = Modifier,
+        clickable: Boolean = true,
+        onClick: () -> Unit = {}
+    ) = @Composable {
+        RippledIcon(
+            modifier = modifier,
+            imageVector = ImageVector.vectorResource(R.drawable.ic_back),
+            clickable = clickable,
+            onClick = onClick
+        )
+    }
     @Composable
     private fun RippledIcon(
         imageVector: ImageVector,
