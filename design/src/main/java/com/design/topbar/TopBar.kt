@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.design.ripple.circleRipple
-import com.example.design.R
+import com.design.R
 
 @Composable
 fun TopBar(

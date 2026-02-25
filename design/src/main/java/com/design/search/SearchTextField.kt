@@ -1,6 +1,5 @@
-package com.audiobookmaker.main.ui.component
+package com.design.search
 
-import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.design.R
+import com.design.R
 
 @Composable
 fun SearchTextField(

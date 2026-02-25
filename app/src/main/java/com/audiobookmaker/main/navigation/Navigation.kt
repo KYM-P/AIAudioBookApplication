@@ -3,6 +3,7 @@ package com.audiobookmaker.main.navigation
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.audiobookmaker.main.ui.addbook.AddBookScreen
 import com.audiobookmaker.main.ui.main.MainScreen
 
 fun NavGraphBuilder.navigationGraph(
@@ -10,5 +11,9 @@ fun NavGraphBuilder.navigationGraph(
 ) {
     composable(route = MAIN_ROUTE) {
         MainScreen()
+    }
+
+    composable (route = ADD_BOOK_ROUTE) {
+        AddBookScreen()
     }
 }

@@ -5,8 +5,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
@@ -25,7 +27,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.audiobookmaker.R
 import com.audiobookmaker.main.ui.component.AddFloatingButton
 import com.audiobookmaker.main.ui.component.BookItem
-import com.audiobookmaker.main.ui.component.SearchTextField
+import com.design.dropdown.DropDownBox
+import com.design.search.SearchTextField
 import com.design.topbar.TopBar
 import com.design.topbar.TopBarIcon
 import com.domain.model.AudioBookBoard
@@ -92,6 +95,17 @@ fun MainScreenImpl(
             )
 
             Spacer(Modifier.height(20.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End
+            ) {
+                DropDownBox(
+                    items = listOf("최신 순", "오래된 순")
+                )
+            }
+
+            Spacer(Modifier.height(18.dp))
 
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),

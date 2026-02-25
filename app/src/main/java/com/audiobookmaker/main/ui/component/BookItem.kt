@@ -2,7 +2,6 @@ package com.audiobookmaker.main.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -36,8 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.audiobookmaker.R
-import com.audiobookmaker.main.ui.extension.noEffectClickable
-import com.audiobookmaker.main.ui.extension.rippleClickable
+import com.design.extension.rippleClickable
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
